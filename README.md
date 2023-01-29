@@ -86,11 +86,9 @@ weve 1
 got 1
 father 1
 mother 1
-each 1
 said 1
 beth 1
 contentedly 1
-her 1
 corner 1
 ```
 
