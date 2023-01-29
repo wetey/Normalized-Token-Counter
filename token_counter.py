@@ -17,7 +17,6 @@ nltk.download('wordnet')
 acceptedArguments = ["--lower", "--upper", "--stem", "--stop", "--lemm", "--cont"]
 stopWords = set(stopwords.words('english'))
 punctuation = string.punctuation + '\u2018\u2019\u201A\u201B\u201C\u201D\u201E\u201F'
-
 #name of textfile for processing
 textFile = sys.argv[1]
 
@@ -60,7 +59,6 @@ for line in lines:
 
     #add the words to the larger list
     words.extend(line)
-
 #applying operations
 for argument in arguments:
     if argument == '--lower':
@@ -68,9 +66,7 @@ for argument in arguments:
     elif argument == '--upper':
         words = [word.upper() for word in words]
     elif argument == '--stop':
-        for word in words:
-            if word in stopWords:
-                words.remove(word)
+        words = [word for word in words if word not in stopWords]
     elif argument == '--stem':
         ss = SnowballStemmer("english")
         words = [ss.stem(word) for word in words]
