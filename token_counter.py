@@ -39,8 +39,7 @@ if not set(arguments).issubset(set(acceptedArguments)):
 textFile = open(textFile, mode = "r", encoding="utf-8")
 corpus = textFile.read()
 textFile.close()
-print(corpus)
-print("\n")
+
 #if '--cont' was passed as an arugment, it will be exectued first
 if '--cont' in arguments:
     corpus = contractions.fix(corpus)
