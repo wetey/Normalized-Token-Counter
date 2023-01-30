@@ -39,7 +39,8 @@ if not set(arguments).issubset(set(acceptedArguments)):
 textFile = open(textFile, mode = "r", encoding="utf-8")
 corpus = textFile.read()
 textFile.close()
-
+print(corpus)
+print("\n")
 #if '--cont' was passed as an arugment, it will be exectued first
 if '--cont' in arguments:
     corpus = contractions.fix(corpus)
@@ -59,6 +60,7 @@ for line in lines:
 
     #add the words to the larger list
     words.extend(line)
+
 #applying operations
 for argument in arguments:
     if argument == '--lower':
@@ -66,7 +68,7 @@ for argument in arguments:
     elif argument == '--upper':
         words = [word.upper() for word in words]
     elif argument == '--stop':
-        words = [word for word in words if word not in stopWords]
+        words = [word for word in words if word.lower() not in stopWords]
     elif argument == '--stem':
         ss = SnowballStemmer("english")
         words = [ss.stem(word) for word in words]
