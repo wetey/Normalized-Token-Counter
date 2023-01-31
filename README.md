@@ -3,7 +3,7 @@
 Simple normalized token counter with Python. </br>
 
 ## Description 
-This tool normalises text and outputs the frequency of each token. One word is one token, and the punctuation is removed during processing.
+This tool normalises text and outputs the frequency of each token. One word is one token and the punctuation marks are removed during processing.
 There are eight normalizers to choose from:
 1. Lower casing
 2. Upper casing
@@ -37,7 +37,7 @@ Available arugments:
 ## Examples
 
 ### Command 
-Normalises text by lowercasing all the character, stemming, and expanding contraction.
+Normalises text by lowercasing all the characters, stemming, and expanding contraction.
 ```bash
 python token_counter.py "test.txt" --lower --stem --cont
 ```
@@ -67,7 +67,7 @@ rug 1
 ```
 
 ### Command
-Normalises text by lowercasing all the character, removing stopwords, and lemmatizing.
+Normalises text by lowercasing all the characters, removing stopwords, and lemmatizing.
 ```bash
 python token_counter.py "test.txt" --lower --stop --lemm   
 ```
