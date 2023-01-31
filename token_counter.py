@@ -81,8 +81,8 @@ uniqueTokens = collections.defaultdict(int)
 for word in words:
     uniqueTokens[word] += 1
 
-#sort the frequencies from largest to slowest
-uniqueTokens = sorted(uniqueTokens.items(), key = lambda x:x[1], reverse= True)
+#sort the frequencies from largest to smallest
+uniqueTokens = sorted(uniqueTokens.items(), key = lambda x:x[1], reverse = True)
 
 #print the tokens and their frequency
 for token in uniqueTokens:
